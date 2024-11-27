@@ -1,0 +1,164 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Container Class */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background-color: #222;
+    color: white;
+    padding: 2.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left h1 {
+    font-size: 2rem;
+}
+
+.header-left p {
+    font-size: 1.2rem;
+}
+
+.social-media-links a {
+    margin-left: 10px;
+}
+
+.social-media-links img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Main Project Section */
+#project {
+    margin-top: 100px; /* to prevent overlap with fixed header */
+    padding: 3rem 0;
+    background-color: #fff;
+}
+
+
+
+/* Project Title */
+.project-title {
+    position: absolute;  /* Position relative to the .project-image container */
+    bottom: 20px;          /* Position 5% from the bottom of the image */
+    right: 20px;          /* Position 20px from the left of the image */
+    background-color: rgba(248, 248, 248, 0.8);  /* Slight transparent background */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    width: 80%;          /* Set width relative to image size */
+    max-width: 500px;    /* Maximum width to prevent stretching on larger screens */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    text-align: center;  /* Center the title */
+}
+
+.project-title h2 {
+    font-size: 4vw;  /* Use viewport width to make the title scale responsively */
+    margin: 0;
+}
+
+/* Project Image Section */
+.project-image {
+    position: relative;  /* Set the container to relative to anchor the absolute positioning of info box */
+    width: 100%;
+    height: auto;         /* Allow the height to adjust based on image width */
+    max-height: 900px;    /* Set a max height for large images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Project Info Box */
+.project-info-box {
+    position: absolute;  /* Position relative to the .project-image container */
+    bottom: 20px;         /* 10% from the bottom of the image */
+    left: 20px;          /* 20px from the left */
+    background-color: rgba(248, 248, 248, 0.8);  /* Slight transparent background */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    width: auto;
+    max-width: 80%;      /* Set a maximum width */
+    box-sizing: border-box;
+}
+
+/* Ensure images scale properly */
+.project-image img {
+    width: 100%;       /* Make the image width 100% of its container */
+    height: auto;      /* Maintain aspect ratio */
+    max-height: 900px; /* Set a maximum height for the image */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add small padding to the container so text doesn't stick to the edges */
+.project-info-box p {
+    margin-bottom: 0.5rem;
+}
+
+
+
+.project-info-box p {
+    margin-bottom: 0.5rem;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-details {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+}
+
+.github-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.github-link .button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.github-link .button:hover {
+    background-color: #0056b3;
+}
