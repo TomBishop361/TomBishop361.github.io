@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Pressure Point</title>
+    
+        <!-- Favicon -->
+        <link rel="icon" href="PressurePoint/NEW_Client_Icon.png" type="image/x-icon">
+        <!-- Or for PNG -->
+        <!-- <link rel="icon" href="path_to_your_favicon.png" type="image/png"> -->
+    
+        <link rel="stylesheet" href="ProjectStyles.css">
+    </head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <h1>Thomas Bishop</h1>
+                <p>Games Programmer</p>
+                <!-- Back to Index Button -->
+                <a href="index.html" class="back-to-index-btn">Back</a>
+            </div>
+            <div class="social-media-links">
+                <a href="https://www.linkedin.com/in/tom-bishop-a8802a335/" target="_blank">
+                    <img src="HeaderIcons/linkedin-brands-solid.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/TomBishop361" target="_blank">
+                    <img src="HeaderIcons/github-brands-solid .svg" alt="GitHub">
+                </a>
+                <a href="https://itch.io/profile/tjbgames451" target="_blank">
+                    <img src="HeaderIcons/itch-io-brands-solid.svg" alt="Itch.io">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Section -->
+    <section id="project">
+        <div class="container">
+            <!-- Main Project Image -->
+            <div class="project-image">
+                <img src="PressurePoint/PressurePointMain.png" alt="Project Image" class="thumbnail" onclick="openModal(0)">
+                <div class="project-info-box">
+                    <p><strong>Engine:</strong> Unity</p>
+                    <p><strong>Language:</strong> C#</p>
+                </div>
+                <div class="project-title">
+                    <h2>Pressure Point</h2>  
+                </div>
+            </div>
+
+            <!-- Additional Project Images -->
+            <div class="additional-images">
+                <img src="PressurePoint/PP1.png" alt="Additional Image 1" class="thumbnail" onclick="openModal(1)">
+                <img src="PressurePoint/PP2.png" alt="Additional Image 2" class="thumbnail" onclick="openModal(2)">
+                <img src="PressurePoint/PP3.png" alt="Additional Image 3" class="thumbnail" onclick="openModal(3)">
+            </div>
+
+            <!-- Project Description -->
+            <div class="project-details">
+                <p>Embark on a perilous journey into the depths of the unknown in this immersive iron-punk sci-fi adventure. Set in a dystopian future where the rusty waters of a desolate planet conceal dark secrets.  As a convicted criminal offered a chance at redemption, you find yourself sealed inside a one-man submarine, your mission is clear: repair and maintain this vital vessel as it plunges into the treacherous depths in search of crucial resources. Your skills as a mechanic will be put to the ultimate test as you face relentless challenges and unforeseen obstacles. From patching leaks to turning valves, every repair is a race against time as you strive to keep your submarine operational in the face of ever-present danger. 
+
+                    The fate of your mission rests solely on your ability to keep your submarine afloat in the face of adversity.</p>
+            </div>
+
+            <!-- Project Video Section -->
+            <div class="video-section">
+                <h3>Project Video</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class = "Embed-section">
+                <iframe frameborder="0" src="https://itch.io/embed/2703540?bg_color=1C1C1C&amp;fg_color=ffffff&amp;link_color=266DD3" width="552" height="167"><a href="https://tblpgame.itch.io/pressure-point">Pressure-Point by tblpGame, TJBGames451</a></iframe>
+            </div>
+
+            <!-- GitHub Link -->
+            <div class="github-link">
+                <a href="https://github.com/yourusername/project-repo" target="_blank" class="button">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Image Viewing -->
+    <div id="imageModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">×</span>
+        <div class="modal-content">
+            <button class="prev-btn" onclick="changeImage(-1)">&#10094;</button>
+            <img id="modalImage" src="" alt="Modal Image">
+            <button class="next-btn" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name - Game Programmer</p>
+        </div>
+    </footer>
+
+    <!-- Link to External JavaScript File -->
+    <script src="ProjectScripts.js"></script>
+</body>
+</html>
