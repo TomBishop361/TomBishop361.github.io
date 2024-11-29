@@ -87,6 +87,9 @@ header {
     color: #bbb;
 }
 
+
+
+
 #projects {
     padding: 3rem 0;
 }
@@ -148,6 +151,15 @@ header {
 .project-card:hover {
     transform: translateY(-10px);
 }
+
+
+
+
+
+
+
+
+
 
 footer {
     background-color: #222;
