@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,30 +40,38 @@
         </div>
     </header>
 
+    <section id="blank"></section>
+
     <!-- Project Section -->
     <section id="project">
         <div class="container">
-            <!-- Main Project Image -->
-            <div class="project-image">
-                <!-- Project Video Section -->
-                <div class="video-section">
-                    <div class="video-container">
-                        <iframe width="1920" height="1080" src="https://www.youtube.com/embed/Ag0a6q_fDdw?si=YcxdmPhPyDkkVsdE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- Project Section Container -->
+            <div class="project-section">
+                <!-- Video Container -->
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/Ag0a6q_fDdw?si=YcxdmPhPyDkkVsdE" 
+                        title="YouTube video player" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <!-- Info and Title Section -->
+                <div class="info-and-title">
+                    <div class="project-title">
+                        <h2>Unreal Boids</h2>
+                    </div>
+                    <div class="project-info-box">
+                        <p><strong>Engine:</strong> Unreal</p>
+                        <p><strong>Language:</strong> C++</p>
                     </div>
                 </div>
-                <div class="project-info-box">
-                    <p><strong>Engine:</strong> Unreal</p>
-                    <p><strong>Language:</strong> C++</p>
-                </div>
-                <div class="project-title">
-                    <h2>Pressure Point</h2>  
-                </div>
-            </div>           
+            </div>
 
             <!-- Project Description -->
             <div class="project-details">
-                <p> A boids project in</p>
-            </div>            
+                <p>A boids project in Unreal Engine, built using C++.</p>
+            </div>
 
             <!-- GitHub Link -->
             <div class="github-link">
@@ -89,5 +99,3 @@
 
     <!-- Link to External JavaScript File -->
     <script src="ProjectScripts.js"></script>
-</body>
-</html>
