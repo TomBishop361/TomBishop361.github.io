@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PortfolioProject — ECS (Unreal Engine)</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    /* Page-local styles from the template */
+    .project-hero{
+      width:100%;
+      max-width:1100px;
+      margin:20px auto;
+      border-radius:12px;
+      overflow:hidden;
+      background:var(--card-bg);
+      box-shadow: 0 8px 30px rgba(2,6,23,0.06);
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:0;
+    }
+    .project-hero .cover{ min-height:220px; display:block; width:100%; height:100%; object-fit:cover; }
+    .project-content{ padding:20px 26px; }
+    .project-meta{ padding:20px; border-left:1px solid rgba(0,0,0,0.04); display:flex; flex-direction:column; gap:12px; justify-content:flex-start; align-items:flex-start; }
+    .project-title{ display:flex; gap:12px; align-items:center; justify-content:space-between; margin:0 0 8px; width:100%; }
+    .project-title h1{ margin:0; font-size:1.25rem; }
+    .project-excerpt{ color:var(--muted); margin:8px 0 12px; }
+    .badges{ display:flex; flex-wrap:wrap; gap:8px; margin:6px 0; }
+    .badge{ background: rgba(10,10,10,0.05); color:var(--text); padding:6px 8px; border-radius:999px; font-size:.82rem; border:1px solid rgba(0,0,0,0.04); }
+    .meta-row{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; color:var(--muted); font-size:.92rem; }
+    .cta{ display:flex; gap:8px; margin-top:8px; width:100%; }
+    .btn{ display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none; background:var(--accent); color:white; font-weight:600; font-size:.95rem; }
+    .btn.ghost{ background:transparent; color:var(--text); border:1px solid rgba(0,0,0,0.06); }
+    .project-body{ max-width:900px; margin:20px auto; padding:0 18px; line-height:1.6; }
+    .gallery{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-top:12px; }
+    .gallery img{ width:100%; height:160px; object-fit:cover; border-radius:8px; }
+    @media (max-width:920px){ .project-hero{ grid-template-columns: 1fr; } .project-meta{ border-left: none; border-top:1px solid rgba(0,0,0,0.04); } }
+    [data-theme="dark"] .badge{ background: rgba(255,255,255,0.04); color:var(--text); border-color: rgba(255,255,255,0.04); }
+  </style>
+</head>
+<body>
+  <header class="site-header" style="gap:12px;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="/" aria-label="Back to home" style="text-decoration:none;font-weight:600">← Home</a>
+      <div style="color:var(--muted);font-size:.95rem"> / <span style="margin-left:8px">PortfolioProject — ECS</span></div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:8px;">
+      <button id="project-theme-toggle" aria-label="Toggle theme" class="controls-btn" style="background:transparent;border:none;cursor:pointer;font-size:18px">🌓</button>
+    </div>
+  </header>
+
+  <!-- HERO / SUMMARY -->
+  <section class="project-hero" aria-labelledby="project-heading">
+    <div>
+      <img class="cover" src="../assets/portfolioproject-ecs-hero.png" alt="PortfolioProject ECS hero image" />
+      <div class="project-content">
+        <div class="project-title">
+          <h1 id="project-heading">PortfolioProject — ECS</h1>
+          <div class="meta-row">
+            <span class="badge">C++</span>
+            <span class="badge">Unreal Engine</span>
+          </div>
+        </div>
+
+        <p class="project-excerpt">A small, custom Entity Component System (ECS) implemented on top of Unreal Engine. Designed to experiment with data-driven entity composition, decoupled systems, and Blueprint-friendly component authors.</p>
+
+        <div class="badges">
+          <span class="badge">ECS</span>
+          <span class="badge">Blueprints</span>
+          <span class="badge">Systems</span>
+          <span class="badge">UE Subsystem</span>
+        </div>
+
+        <div class="cta" role="group" aria-label="Project links">
+          <a class="btn" href="https://github.com/TomBishop361/PortfolioProject" target="_blank" rel="noopener">Repository</a>
+          <a class="btn ghost" href="https://github.com/TomBishop361/PortfolioProject/tree/main/Source/PortfolioProject" target="_blank" rel="noopener">Source files</a>
+        </div>
+      </div>
+    </div>
+
+    <aside class="project-meta" aria-label="Project details">
+      <div style="width:100%">
+        <h3 style="margin:0 0 6px">Quick facts</h3>
+        <div class="meta-row">
+          <strong style="margin-right:6px">Role:</strong> <span>Author / Experimenter</span>
+        </div>
+        <div class="meta-row">
+          <strong style="margin-right:6px">Duration:</strong> <span>Prototype / Ongoing</span>
+        </div>
+        <div class="meta-row">
+          <strong style="margin-right:6px">Stack:</strong> <span>C++, Unreal Engine, Blueprints</span>
+        </div>
+      </div>
+
+      <div style="width:100%; margin-top:8px">
+        <h4 style="margin:0 0 6px">Highlights</h4>
+        <ul style="margin:0;padding-left:18px;color:var(--muted)">
+          <li>Lightweight ECS with EntityID-based entities (EntityID = uint32)</li>
+          <li>Blueprintable component authors to compose entities in the editor</li>
+          <li>Systems (Movement, Health) run each tick via an ECS tick actor</li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+
+  <!-- MAIN WRITEUP -->
+  <main class="project-body" role="main">
+    <section>
+      <h2>Overview</h2>
+      <p>This project implements a small Entity Component System (ECS) on top of Unreal Engine to explore data-driven entity composition and decoupled systems. Entities are IDs, components are plain data structs stored in typed component containers, and systems operate on those components each tick.</p>
+
+      <h3>High-level architecture</h3>
+      <ul>
+        <li><strong>Entities:</strong> lightweight IDs generated by the ECS (EntityID).</li>
+        <li><strong>Components:</strong> data-only types (e.g. FPositionComponent, FHealthComponent) stored in component-specific storage.</li>
+        <li><strong>Component Authors:</strong> UObject-derived, Blueprintable helpers (UcomponentAuthorBase) that add components to entities during BeginPlay.</li>
+        <li><strong>Systems:</strong> structs implementing ISystemInterface (e.g. FMovementSystem, FHealthSystem) invoked by the manager on Tick.</li>
+        <li><strong>Manager:</strong> UECSManager (a UE subsystem) holds storage, entities, and dispatches systems. An AECSTickObject calls ECS->Tick() each frame.</li>
+      </ul>
+
+      <h3>How it works (flow)</h3>
+      <ol>
+        <li><strong>Initialization:</strong> UECSManager (subsystem) sets up component storage and registers systems.</li>
+        <li><strong>Entity creation:</strong> AEntityBase::BeginPlay gets the UECSManager and calls CreateEntity(), then each UcomponentAuthorBase instance calls AddToEntity(entity, ECS) to add component data.</li>
+        <li><strong>Per-frame:</strong> AECSTickObject::Tick() calls ECS->Tick(), which dispatches registered systems (Perform(UECSManager*)) to operate on components.</li>
+        <li><strong>Cleanup:</strong> The manager queues removals and destruction requests and processes them safely (see removeAllComponentsFromEntity/processDestructionRequests).</li>
+      </ol>
+
+      <h3>Key classes & files</h3>
+      <ul>
+        <li><a href="https://github.com/TomBishop361/PortfolioProject/blob/main/Source/PortfolioProject/ECSManager.h" target="_blank" rel="noopener">ECSManager.h / .cpp</a> — main UE subsystem exposing ECS API (create/destroy entities, add/remove components, tick logic)</li>
+        <li><a href="https://github.com/TomBishop361/PortfolioProject/blob/main/Source/PortfolioProject/componentAuthorBase.h" target="_blank" rel="noopener">componentAuthorBase.h</a> — base class for Blueprintable component authors</li>
+        <li><a href="https://github.com/TomBishop361/PortfolioProject/blob/main/Source/PortfolioProject/EntityBase.cpp" target="_blank" rel="noopener">EntityBase.cpp</a> — actor that owns an EntityID and author instances</li>
+        <li><a href="https://github.com/TomBishop361/PortfolioProject/blob/main/Source/PortfolioProject/MovementSystem.h" target="_blank" rel="noopener">MovementSystem.h</a> & <a href="https://github.com/TomBishop361/PortfolioProject/blob/main/Source/PortfolioProject/HealthSystem.h" target="_blank" rel="noopener">HealthSystem.h</a> — example systems</li>
+        <li><a href="https://github.com/TomBishop361/PortfolioProject/blob/main/Source/PortfolioProject/positionComponentAuthor.cpp" target="_blank" rel="noopener">positionComponentAuthor.cpp</a> / <a href="https://github.com/TomBishop361/PortfolioProject/blob/main/Source/PortfolioProject/healthComponentAuthor.cpp" target="_blank" rel="noopener">healthComponentAuthor.cpp</a> — examples of component authors</li>
+      </ul>
+
+      <h3>How to add components & systems (summary)</h3>
+      <p>Define a plain data struct for the component, create a Blueprintable component author (derive from UcomponentAuthorBase) and implement AddToEntity to call ecs->AddComponent<T>. For systems, implement ISystemInterface, provide Perform(UECSManager*), and register the system with the manager.</p>
+
+      <h3>Notes, limitations & future improvements</h3>
+      <p>Current implementation favors clarity over maximum data locality. Systems run synchronously each tick; future work could add a query API, archetype/sparse-set storage for faster iteration, and parallelized systems for CPU-bound workloads. Consider adding defensive checks and improved lifetime management.</p>
+
+      <h3>Screenshots & diagrams</h3>
+      <div class="gallery">
+        <img src="../assets/portfolioproject-ecs-1.png" alt="ECS diagram" />
+        <img src="../assets/portfolioproject-ecs-2.png" alt="Component author example" />
+        <img src="../assets/portfolioproject-ecs-3.png" alt="System flow" />
+        <img src="../assets/portfolioproject-ecs-4.png" alt="Runtime example" />
+      </div>
+
+      <h3 style="margin-top:18px">Useful links</h3>
+      <ul>
+        <li><a href="https://github.com/TomBishop361/PortfolioProject" target="_blank" rel="noopener">Repository root</a></li>
+        <li><a href="https://github.com/TomBishop361/PortfolioProject/blob/main/Source/PortfolioProject/ECSManager.h" target="_blank" rel="noopener">ECSManager (key API)</a></li>
+        <li><a href="https://github.com/TomBishop361/PortfolioProject/blob/main/Source/PortfolioProject/SystemInterface.h" target="_blank" rel="noopener">SystemInterface (ISystemInterface)</a></li>
+        <li><a href="https://github.com/TomBishop361/PortfolioProject/blob/main/Source/PortfolioProject/componentAuthorBase.h" target="_blank" rel="noopener">componentAuthorBase (Blueprint authors)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made by Tom Bishop — <a href="https://github.com/TomBishop361">GitHub</a></p>
+  </footer>
+
+  <script>
+    // Theme sync with homepage
+    (function(){
+      const THEME_KEY = 'site:theme';
+      const stored = localStorage.getItem(THEME_KEY);
+      if(stored === 'dark') document.documentElement.setAttribute('data-theme','dark');
+      else document.documentElement.removeAttribute('data-theme');
+
+      const btn = document.getElementById('project-theme-toggle');
+      function updateLabel(){ const isDark = document.documentElement.getAttribute('data-theme') === 'dark'; btn.textContent = isDark ? '☀️' : '🌙'; }
+      updateLabel();
+      btn.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if(isDark){ document.documentElement.removeAttribute('data-theme'); localStorage.setItem(THEME_KEY, 'light'); }
+        else { document.documentElement.setAttribute('data-theme','dark'); localStorage.setItem(THEME_KEY, 'dark'); }
+        updateLabel();
+      });
+    })();
+  </script>
+</body>
+</html>
