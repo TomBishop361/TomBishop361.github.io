@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="about">
+      <img id="me-photo" src="assets/me.jpg" alt="Your Name" />
+      <div class="about-text">
+        <h1>Your Name</h1>
+        <p>Short tagline about you. Replace this with your role (e.g. Frontend Engineer), location, or one-line bio.</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙 / ☀️</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="projects-section">
+      <h2>Projects</h2>
+      <div id="projects" class="projects-grid" aria-live="polite">
+        <!-- Project cards injected here from projects.json -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made by Your Name — <a href="https://github.com/YourGitHub">GitHub</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
